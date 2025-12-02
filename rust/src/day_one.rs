@@ -25,7 +25,7 @@ fn parse_rotation(line: &str) -> i32 {
         return stripped.parse::<i32>().unwrap();
     };
     if let Some(stripped) = line.strip_prefix('L') {
-        stripped.parse::<i32>().unwrap()
+        -stripped.parse::<i32>().unwrap()
     } else {
         panic!("Invalid rotation: {}", line);
     }
@@ -51,7 +51,6 @@ fn part_two(lines: &Vec<String>, mut zero_count: i32, mut position: i32) -> i32 
 
         (position, zero_wraps) = make_rotation(0, 99, position, rotation);
         zero_count += zero_wraps;
-        println!("{}, {}, {}", position, zero_wraps, rotation);
     }
 
     zero_count
