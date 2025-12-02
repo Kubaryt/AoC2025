@@ -1,7 +1,9 @@
 use crate::day_one::run as day_one;
+use crate::day_two::run as day_two;
 use std::{fs, io};
 
 mod day_one;
+mod day_two;
 
 fn main() {
     let mut day_number = String::new();
@@ -19,6 +21,9 @@ fn main() {
     match day_number {
         "1" => {
             day_one(&input);
+        }
+        "2" => {
+            day_two(&input);
         }
         _ => {
             unimplemented!()
