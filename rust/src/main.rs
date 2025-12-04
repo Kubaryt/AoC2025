@@ -1,8 +1,10 @@
+use crate::day_four::run as day_four;
 use crate::day_one::run as day_one;
 use crate::day_three::run as day_three;
 use crate::day_two::run as day_two;
 use std::{fs, io};
 
+mod day_four;
 mod day_one;
 mod day_three;
 mod day_two;
@@ -29,6 +31,9 @@ fn main() {
         }
         "3" => {
             day_three(&input);
+        }
+        "4" => {
+            day_four(&input);
         }
         _ => {
             unimplemented!()
