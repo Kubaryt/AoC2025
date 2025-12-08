@@ -1,6 +1,7 @@
 use crate::day_five::run as day_five;
 use crate::day_four::run as day_four;
 use crate::day_one::run as day_one;
+use crate::day_six::run as day_six;
 use crate::day_three::run as day_three;
 use crate::day_two::run as day_two;
 use std::{fs, io};
@@ -8,6 +9,7 @@ use std::{fs, io};
 mod day_five;
 mod day_four;
 mod day_one;
+mod day_six;
 mod day_three;
 mod day_two;
 
@@ -39,6 +41,12 @@ fn main() {
         }
         "5" => {
             day_five(&input);
+        }
+        "6" => {
+            println!(
+                "Remember to space last column in your input by adding extra spaces to operator and lines with numbers of lower length!"
+            );
+            day_six(&input);
         }
         _ => {
             unimplemented!()
